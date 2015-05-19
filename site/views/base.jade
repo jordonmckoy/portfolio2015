@@ -1,0 +1,22 @@
+//- base.jade
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport',content='width=device-width, initial-scale=1.0')
+		meta(name='description', content="Jordon McKoy's Portfolio Site")
+		title Jordon McKoy
+
+		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
+		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
+		link(href='http://fonts.googleapis.com/css?family=Droid+Sans|PT+Serif|Roboto+Condensed', rel='stylesheet', type='text/css')
+		link(rel='stylesheet', href='/stylesheets/base.css')
+	body
+		.container
+			include ./includes/header.jade
+			block content
+			include ./includes/footer.jade
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		script(src='lib/jquery.transit.min.js')
+		script(src='scripts/menu.js') 
