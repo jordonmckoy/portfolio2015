@@ -1,5 +1,5 @@
-$("#menu_btn").click(function (event) {
-	event.preventDefault();
+$("#menu_btn").bind("click tap", function () {
+	//event.preventDefault();
 	$('.ghost').each(function () {
 		if ($(this).hasClass('busters') === false) {
 			$(this).addClass('busters');
@@ -11,5 +11,7 @@ $("#menu_btn").click(function (event) {
 		}
 	});
 	$('ul.menu').toggleClass('collapsed');
+
+	return false;
 });
 

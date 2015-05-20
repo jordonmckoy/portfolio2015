@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var contact_route = require('./routes/contact');
 var users = require('./routes/users');
 
 var app = express();
@@ -43,6 +44,7 @@ app.use(stylus.middleware(
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/contact', contact_route);
 app.use('/users', users);
 
 
