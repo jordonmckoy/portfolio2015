@@ -10,7 +10,9 @@ html(lang="en")
 		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
 		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
 		link(href='http://fonts.googleapis.com/css?family=Droid+Sans|PT+Serif|Roboto+Condensed', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', href='/stylesheets/base.css')
+		link(rel='stylesheet', media="screen", href='/stylesheets/base.css')
+		link(rel='stylesheet', media="screen and (max-width:640px)", href='/stylesheets/max-640px.css')
+		link(rel='stylesheet', media="screen and (min-width:640px)", href='/stylesheets/min-640px.css')
 	body
 		.container
 			include ./includes/header.jade
