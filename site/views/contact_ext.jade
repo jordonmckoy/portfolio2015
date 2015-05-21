@@ -1,0 +1,43 @@
+extends base
+
+block content
+	.content
+		#wrapper
+
+			h2#contact_me contact me
+
+			p#contact_msg Feel free to get in touch with me at any time
+
+			table#contact_table
+				tr
+					td.contact_table_social_col
+						//-
+					td.contact_table_social_text_col
+						p.contact_table_social_text Follow me on Twitter
+				tr
+					td.contact_table_social_col
+						//-
+					td.contact_table_social_text_col
+						p.contact_table_social_text Visit my repos on Github
+				tr
+					td.contact_table_social_col
+						//-
+					td.contact_table_social_text_col
+						p.contact_table_social_text Connect with me on LinkedIn
+
+			#email_header
+				p Send me an email 
+
+			form#email_form
+				#email_form_left
+					fieldset#email_name
+						label Your name 
+						input(type='text')
+					fieldset#email_email
+						label Your email 
+						input(type='email')
+				#email_form_right
+					fieldset#email_message
+						label Your message 
+						textarea(rows='4',cols='25')
+						input(type='submit')

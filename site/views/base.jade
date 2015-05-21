@@ -2,23 +2,26 @@
 doctype html
 html(lang="en")
 	head
-		meta(charset='utf-8')
-		meta(name='viewport',content='width=device-width, initial-scale=1.0')
-		meta(name='description', content="Jordon McKoy's Portfolio Site")
-		title Jordon McKoy
+		block head
+			meta(charset='utf-8')
+			meta(name='viewport',content='width=device-width, initial-scale=1.0')
+			meta(name='description', content="Jordon McKoy's Portfolio Site")
+			meta(<meta name="google-site-verification", content="xuAh9bBf4uhSFvlMzbYtB7Oafm1WlzWtdFOFUQI9-sM")
+			title Jordon McKoy
 
-		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
-		link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
-		link(href='http://fonts.googleapis.com/css?family=Droid+Sans|PT+Serif|Roboto+Condensed', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', media="screen", href='/stylesheets/base.css')
-		link(rel='stylesheet', media="screen and (max-width:640px)", href='/stylesheets/max-640px.css')
-		link(rel='stylesheet', media="screen and (min-width:640px)", href='/stylesheets/min-640px.css')
+			link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css')
+			link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css')
+			link(href='http://fonts.googleapis.com/css?family=Droid+Sans|PT+Serif|Roboto+Condensed', rel='stylesheet', type='text/css')
+			link(rel='stylesheet', media="screen", href='/stylesheets/base.css')
+			link(rel='stylesheet', media="screen and (max-width:640px)", href='/stylesheets/max-640px.css')
+			link(rel='stylesheet', media="screen and (min-width:640px)", href='/stylesheets/min-640px.css')
 	body
 		.container
 			include ./includes/header.jade
 			block content
+				.content
 			include ./includes/footer.jade
 
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
 		script(src='lib/jquery.transit.min.js')
-		script(src='scripts/menu.js') 
+		script(src='scripts/menu.js')

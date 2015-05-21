@@ -1,5 +1,4 @@
-$("#menu_btn").bind("click tap", function () {
-	//event.preventDefault();
+toggleMenu = function () {
 	$('.ghost').each(function () {
 		if ($(this).hasClass('busters') === false) {
 			$(this).addClass('busters');
@@ -11,7 +10,27 @@ $("#menu_btn").bind("click tap", function () {
 		}
 	});
 	$('ul.menu').toggleClass('collapsed');
+}
+
+$("#menu_btn").bind("click tap", function () {
+	//event.preventDefault();
+	toggleMenu();
 
 	return false;
 });
 
+$("#contact_btn").bind("click tap", function () {
+
+	var mobile = $('#menu_btn').is(':hidden');
+
+	$.get('/contact', {isMobile : mobile, fromBtn : true}, function(result) {
+		$('.content').html(result);
+	});
+
+	// TODO check mobile support
+	history.pushState(null,null,'contact');
+
+	toggleMenu();
+
+	return false;
+});
